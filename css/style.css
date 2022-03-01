@@ -1,0 +1,590 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "微軟正黑體", sans-serif;
+}
+
+header {
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    width: 100vw;
+    height: 6.8vh;
+    z-index: 9999;
+    transition: background-color .8s;
+    backdrop-filter: saturate(180%) blur(16px)
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+input[type=text], input[type=password] {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 5vw;
+}
+
+nav img {
+    height: 70%;
+}
+
+nav .nav-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.active {
+    color: #2196F3 !important;
+}
+
+nav .nav-item a {
+    margin: 5px 10px;
+    color: white;
+    width: 8vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: .5s;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+nav .nav-item a:hover {
+    color: #2196F3;
+    background-color: white;
+}
+
+.page-head {
+    background-image: url(/img/7495024004_2e3b86d2ba_b.jpg);
+    height: 32vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-head h1 {
+    position: relative;
+    top: 50%;
+    font-weight: bold;
+    font-size: 3rem;
+    border-left: 10px solid #2196F3;
+    padding-left: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+/* Carousel Start */
+
+.carousel {
+    display: flex;
+    width: 300%;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel .carousel-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    transition: 2s;
+}
+
+.carousel .carousel-item img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(.7);
+}
+
+.carousel .carousel-item .carousel-caption {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    bottom: 10vh;
+    width: 50vw;
+    height: 10vh;
+    line-height: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background: #3338;
+    color: white;
+}
+
+.carousel .carousel-item .carousel-caption p {
+    overflow-wrap: break-word;
+}
+
+/* css for manual navigation */
+
+.navigation-manual {
+    position: absolute;
+    width: 100vw;
+    bottom: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #2196F3;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:hover {
+    background: #2196F3;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 3vw;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100vw;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200vw;
+}
+
+/* css for automatic navigation */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    bottom: 4vh;
+}
+
+.navigation-auto div {
+    border: 2px solid #2196F3;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 3vw;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #2196F3;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #2196F3;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #2196F3;
+}
+
+/* Information */
+
+.information-area {
+    min-height: 84vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0;
+}
+
+.information-area h1 {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 10px solid #2196F3;
+}
+
+.informations {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2vh;
+}
+
+.information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #2196F3;
+    width: 30%;
+    height: 40vh;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 0 #3338;
+    transition: 1.1s;
+}
+
+.information:hover {
+    transform: scale(1.1)
+}
+
+.information .title, .information .date, .information button {
+    font-weight: bold;
+}
+
+.information .title {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    border-left: 10px solid white;
+    padding-left: 10px;
+    font-size: 2rem;
+    /* color: #E0E0E0; */
+    color: white;
+    opacity: 85%;
+}
+
+.information .content {
+    height: 65%;
+    line-height: 1.5rem;
+    color: white;
+}
+
+.information .more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+}
+
+.information .date {
+    width: 50%;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.information button {
+    position: relative;
+    height: 85%;
+    width: 40%;
+    margin-left: auto;
+    background: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: .5s ease;
+    font-size: 1.3rem;
+}
+
+.information button:hover {
+    border: 2px solid white;
+    color: white;
+    background-color: #2196F3;
+}
+
+/* News */
+
+.news-area {
+    min-height: 84vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10vh 0;
+}
+
+.news {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    height: 40vh;
+}
+
+.news .images {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.news img {
+    width: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.news .caption {
+    display: flex;
+    justify-content: space-between;
+    min-height: 8vh;
+    margin-top: 2vh;
+}
+
+.news .text {
+    width: 70%;
+}
+
+.news .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.news button {
+    width: 20%;
+    height: 50%;
+    align-self: flex-start;
+    background-color: #2196F3;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: .5s ease;
+    font-size: 1.3rem;
+}
+
+.news button:hover {
+    border: 2px solid #2196F3;
+    color: #2196F3;
+    background-color: white;
+}
+
+/* Discover */
+.discover-area {
+    min-height: 84vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10vh 0;
+}
+
+.discover-card {
+    perspective: 150rem;
+    position: relative;
+    height: 60vh;
+    width: 33%;
+}
+
+.card-side {
+    height: 35rem;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    color: white
+}
+
+.card-side.front {
+    background-color: #2196F3;
+}
+
+.card-side.back {
+    background-color: #2196F3;
+    transform: rotateY(-180deg);
+    padding: 2rem;
+    line-height: 1.5rem;
+}
+
+.card-side.front img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card-side.front .text {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.card-side.front p {
+    font-size: .8rem;
+    opacity: .75;
+}
+  
+.discover-card:hover .card-side.front {
+    transform: rotateY(180deg);
+}
+  
+.discover-card:hover .card-side.back {
+    transform: rotateY(0deg);
+}
+
+/* Cable Area */
+
+.cable-area {
+    min-height: 84vh;
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+.cable-area .area-title {
+    font-weight: bold;
+    font-size: 3rem;
+    border-left: 10px solid #2196F3;
+    padding-left: 10px;
+}
+
+.cable-area .cables {
+    padding-top: 5vh;
+    width: 100%;
+}
+
+.cable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cable img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cable .desc {
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.cable:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.cable:not(:last-child) {
+    margin-bottom: 4vh;
+}
+
+/* Tickets */
+.tickets-area {
+    position: relative;
+    height: 90vh;
+    background-image: url(/img/genshin2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.ticket-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-box .ticket-form {
+    width: 30vw;
+    height: 55vh;
+    background-color: #2196F3;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-form .title {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    border-left: 10px solid white;
+    padding-left: 10px;
+    height: 10%;
+}
+
+.input-area {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3vh 0;
+    color: white;
+}
+
+.input-area label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.input-area input[type=text], .input-area input[type=password] {
+    background: white;
+    height: 2rem;
+    padding: 0 1rem;
+}
+
+.input-area input[type=submit] {
+    margin-top: 2rem;
+    height: 3rem;
+    transition: .5s;
+    color: white;
+    background: #2196F3;
+    border: 1px solid white;
+}
+
+.input-area input[type=submit]:hover {
+    color: #2196F3;
+    background-color: white;
+    border: 1px solid #2196F3;
+}
+
+/* Footer */
+footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    line-height: 1.7rem;
+}
+
+footer .socials img {
+    height: 32px;
+}
+
+.copyright {
+    color: white;
+}

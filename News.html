@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>News | Floriade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+</head>
+
+<header>
+    <nav>
+        <img src="./img/logo-light.3def3bc.png" alt="" class="nav-logo">
+        <div class="nav-item">
+            <a href="/home.html">Home</a>
+            <a href="/News.html" class="active">News</a>
+            <a href="/Discover.html">Discover</a>
+            <a href="/Tickets.html">Tickets</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div class="page-head">
+            <h1 class="container">News</h1>
+        </div>
+
+        <div class="container">
+            <div class="news-area">
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/genshin.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/genshin2.jpeg" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/KIIwAbL.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/av_imagen.jpeg" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/qQZ5Sc2.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="images">
+                        <img src="./img/7495024004_2e3b86d2ba_b.jpg" alt="">
+                    </div>
+                    <div class="caption">
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <img src="./img/facebook.png" alt="">
+            <img src="./img/twitter.png" alt="">
+            <img src="./img/google.png" alt="">
+            <img src="./img/youtube.png" alt="">
+        </div>
+        <div class="copyright">
+            Copyright © 2022 Floriade All Rights Reserved
+        </div>
+    </footer>
+</body>
+
+<script>
+    $(".news").hover(function() {
+        $(this).find('img').css({
+            transform: "scale(1.2)"
+        });
+    }, function() {
+        $(this).find('img').css({
+            transform: "scale(1)"
+        });
+    });
+</script>
+
+</html>
