@@ -2,11 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, "微軟正黑體", sans-serif;
+    font-size: Arial, "微軟正黑體", sans-serif;
 }
 
 :root {
     --primary-color: #4aa447;
+}
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -14,22 +19,22 @@ header {
     z-index: 9999;
     width: 100vw;
     height: 7vh;
-    background: rgba(0,0,0,.7);
-    backdrop-filter: saturate(180%) blur(16px);
-    transition: background-color .8s;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: saturate(100%) blur(16px);
+    transition: background-color .8;
 }
 
 input[type=text],
 input[type=password] {
     background-image: none;
-    background-color: transparent;
+    background: transparent;
     border: none;
     box-shadow: none;
     outline: none;
 }
 
 button:focus {
-    outline: none !important;
+    outline: none;
 }
 
 nav {
@@ -41,6 +46,10 @@ nav {
     padding: 0 5vw !important;
 }
 
+.active {
+    color: var(--primary-color) !important;
+}
+
 nav img {
     height: 80%;
 }
@@ -48,10 +57,6 @@ nav img {
 nav .nav-item {
     display: flex;
     justify-content: space-around;
-}
-
-.active {
-    color: var(--primary-color) !important;
 }
 
 nav .nav-item a {
@@ -73,7 +78,7 @@ nav .nav-item a:hover {
 
 .page-head {
     height: 32vh;
-    background-image: url(../Floriade/Floriade_Floriculture-e1630057729859.jpg);
+    background-image: url(../Floriade/PageHeadBg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,17 +87,15 @@ nav .nav-item a:hover {
 .page-head h1 {
     position: relative;
     top: 50%;
-    padding-left: 10px;
-    border-left: 10px solid var(--primary-color);
     color: white;
-    font-weight: bold;
-    font-size: 3rem;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+.page-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 58vh;
+    padding: 10vh 0;
 }
 
 .container {
@@ -100,24 +103,54 @@ body {
     margin: 0 auto !important;
 }
 
-/* Information */
+.title {
+    font-weight: bold;
+    font-size: 3rem;
+}
 
+.title.title-highlight {
+    padding-left: 10px;
+    border-left: 10px solid var(--primary-color);
+}
+
+.button {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: .5s ease;
+}
+
+.button-green {
+    background: var(--primary-color);
+    border: 2px solid white;
+    color: white;
+}
+
+.button-outline {
+    background: transparent;
+    color: black;
+}
+
+.button-green:hover {
+    background: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button-outline:hover {
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    color: white;
+}
+
+/* Information */
 .information-area {
     display: flex;
     flex-direction: column;
     min-height: 84vh;
-    padding: 5vh 0;
-}
-
-.information-area h1 {
-    margin-left: 20px;
-    padding-left: 10px;
-    border-left: 10px solid var(--primary-color);
-    font-weight: bold;
+    padding-top: 5vh;
 }
 
 .informations {
-    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -125,7 +158,6 @@ body {
 }
 
 .information {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -140,10 +172,9 @@ body {
 }
 
 .information:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
-.information .title,
 .information .date,
 .information button {
     font-weight: bold;
@@ -153,10 +184,9 @@ body {
     display: flex;
     align-items: center;
     height: 10%;
-    padding-left: 10px;
-    border-left: 10px solid white;
+    border-color: white;
     color: white;
-    font-size: 2rem;
+    font-size: 2rem !important;
     opacity: 85%;
 }
 
@@ -181,37 +211,14 @@ body {
 }
 
 .information button {
-    position: relative;
-    height: 85%;
     width: 40%;
-    margin-left: auto;
-    background: white;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    color: black;
+    height: 85%;
     font-size: 1.3rem;
     transition: .5s ease;
 }
 
-.information button:hover {
-    background-color: var(--primary-color);
-    border: 2px solid white;
-    color: white;
-}
-
 /* News */
-
-.news-area {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 84vh;
-    padding: 10vh 0;
-}
-
 .news {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -250,63 +257,32 @@ body {
     align-self: flex-start;
     width: 20%;
     height: 50%;
-    background-color: var(--primary-color);
-    border: 2px solid transparent;
-    border-radius: 15px;
-    color: white;
     font-size: 1.3rem;
     transition: .5s ease;
 }
 
-.news button:hover {
-    background-color: white;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
 /* Discover */
-.discover-area {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 84vh;
-    padding: 10vh 0;
-}
-
-.discover-area .card {
-    position: relative;
+.card {
     height: 60vh;
     width: 30%;
     color: white;
+    border: none;
 }
 
-.discover-area .card img {
+.card img {
     width: 100%;
     height: 50%;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
-.discover-area .card-body {
-    background: var(--primary-color);
+.card-body {
+    background-color: var(--primary-color);
     border-radius: 0 0 8px 8px;
 }
 
-/* Cable Area */
-
-.cable-area {
-    min-height: 84vh;
-    padding-bottom: 10vh;
-}
-
-.cable-area .area-title {
-    padding-left: 10px;
-    border-left: 10px solid var(--primary-color);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.cable-area .cables {
+/* Cables */
+.cables {
     width: 100%;
     padding-top: 5vh;
 }
@@ -315,6 +291,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4vh;
 }
 
 .cable img {
@@ -335,15 +312,11 @@ body {
     flex-direction: row-reverse;
 }
 
-.cable:not(:last-child) {
-    margin-bottom: 4vh;
-}
-
-/* Tickets */
-.tickets-area {
+/* Ticket */
+.ticket-area {
     position: relative;
     height: 90vh;
-    background-image: url(../Floriade/shutterstock_1153650760-1536x1025.jpg);
+    background-image: url(../Floriade/TicketBg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -367,24 +340,22 @@ body {
     width: 30vw;
     height: 55vh;
     padding: 2rem;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 15px;
 }
 
 .ticket-form .title {
+    display: flex;
+    align-items: center;
     height: 10%;
-    padding-left: 10px;
-    border-left: 10px solid white;
+    border-color: white;
     color: white;
-    font-weight: bold;
-    font-size: 3rem;
 }
 
 .input-area {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 3vh 0;
     height: 90%;
     color: white;
 }
@@ -398,24 +369,14 @@ body {
 .input-area input[type=text],
 .input-area input[type=password] {
     height: 2rem;
-    padding: 0 1rem;
-    background: white;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: white;
 }
 
 .input-area input[type=submit] {
     height: 3rem;
     margin-top: 2rem;
-    background: var(--primary-color);
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.input-area input[type=submit]:hover {
-    background-color: white;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
 }
 
 /* Footer */
@@ -426,15 +387,12 @@ footer {
     align-items: center !important;
     width: 100% !important;
     height: 10vh !important;
-    background-color: #333 !important;
+    background: #333 !important;
     line-height: 1.7rem !important;
+    color: white !important;
 }
 
 footer .socials img {
     height: 32px !important;
     cursor: pointer;
-}
-
-.copyright {
-    color: white;
 }

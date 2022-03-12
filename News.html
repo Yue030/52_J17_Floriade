@@ -4,101 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News | Floriade</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="./js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 
-<header>
-    <nav>
-        <img src="./Floriade/8e3df64c8e601369c1d0e9772f89e4de.svg" alt="" class="nav-logo">
-        <div class="nav-item">
-            <a href="/home.html">Home</a>
-            <a href="/News.html" class="active">News</a>
-            <a href="/Discover.html">Discover</a>
-            <a href="/Tickets.html">Tickets</a>
-        </div>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav>
+            <img src="./Floriade/Logo.svg" class="nav-logo" alt="">
+            <div class="nav-item">
+                <a href="./Home.html">Home</a>
+                <a href="./News.html" class="active">News</a>
+                <a href="./Discover.html">Discover</a>
+                <a href="./Ticket.html">Ticket</a>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="page-head">
-            <h1 class="container">News</h1>
+            <h1 class="container title title-highlight">News</h1>
         </div>
 
         <div class="container">
-            <div class="news-area">
+            <div class="page-area">
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/IV223183-geur-1-768x614.jpg" alt="">
+                        <img src="./Floriade/News1.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/FR_Apples-Picking-768x614.jpg" alt="">
+                        <img src="./Floriade/News2.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/Floriade-v2-01-768x614.jpg" alt="">
+                        <img src="./Floriade/News3.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/shutterstock_1153650760-1536x1025.jpg" alt="">
+                        <img src="./Floriade/News4.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/Nepal-1-2-768x614.jpg" alt="">
+                        <img src="./Floriade/News5.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
                 <div class="news">
                     <div class="images">
-                        <img src="./Floriade/Monet-030-1280x852.jpg" alt="">
+                        <img src="./Floriade/News6.jpg" alt="">
                     </div>
                     <div class="caption">
                         <div class="text">
                             <div class="title">Title</div>
-                            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            <div class="desc">Test</div>
                         </div>
-                        <button>View</button>
+                        <button class="button button-green">View</button>
                     </div>
                 </div>
             </div>
@@ -107,10 +110,10 @@
 
     <footer>
         <div class="socials">
-            <img src="./img/facebook.png" alt="">
-            <img src="./img/twitter.png" alt="">
-            <img src="./img/google.png" alt="">
-            <img src="./img/youtube.png" alt="">
+            <img src="./Floriade/facebook.png" alt="">
+            <img src="./Floriade/youtube.png" alt="">
+            <img src="./Floriade/google.png" alt="">
+            <img src="./Floriade/twitter.png" alt="">
         </div>
         <div class="copyright">
             Copyright © 2022 Floriade All Rights Reserved
@@ -120,13 +123,9 @@
 
 <script>
     $(".news").hover(function() {
-        $(this).find('img').css({
-            transform: "scale(1.2)"
-        });
+        $(this).find("img").css({transform: "scale(1.1)"})
     }, function() {
-        $(this).find('img').css({
-            transform: "scale(1)"
-        });
+        $(this).find("img").css({transform: "scale(1)"})
     });
 </script>
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | Floriade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./Floriade/Logo.svg" class="nav-logo" alt="">
+            <div class="nav-item">
+                <a href="./Home.html">Home</a>
+                <a href="./News.html">News</a>
+                <a href="./Discover.html">Discover</a>
+                <a href="./Ticket.html" class="active">Ticket</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="ticket-area">
+            <div class="ticket-box">
+                <form action="./api.php" method="post" class="ticket-form">
+                    <h1 class="title title-highlight">Ticket</h1>
+                    <div class="input-area">
+                        <label for="firstname">
+                            First Name:
+                            <input type="text" id="firstname" name="firstname">
+                        </label>
+                        <label for="lastname">
+                            Last Name:
+                            <input type="text" id="lastname" name="lastname">
+                        </label>
+                        <label for="phonenumber">
+                            Phone Number:
+                            <input type="text" id="phonenumber" name="phonenumber">
+                        </label>
+                        <label for="pw">
+                            Password:
+                            <input type="password" id="pw" name="pw">
+                        </label>
+                        <input type="submit" class="button button-green" value="Buy Ticket">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <img src="./Floriade/facebook.png" alt="">
+            <img src="./Floriade/youtube.png" alt="">
+            <img src="./Floriade/google.png" alt="">
+            <img src="./Floriade/twitter.png" alt="">
+        </div>
+        <div class="copyright">
+            Copyright © 2022 Floriade All Rights Reserved 
+        </div>
+    </footer>
+</body>
+</html>
