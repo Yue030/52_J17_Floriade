@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets | Floriade</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+    <title>Ticket | Floriade</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <img src="./Floriade/Logo.svg" class="nav-logo" alt="">
+            <img src="./Floriade/Logo.svg">
             <div class="nav-item">
                 <a href="./Home.html">Home</a>
                 <a href="./News.html">News</a>
@@ -28,23 +31,23 @@
                 <form action="./api.php" method="post" class="ticket-form">
                     <h1 class="title title-highlight">Ticket</h1>
                     <div class="input-area">
-                        <label for="firstname">
+                        <label for="first">
                             First Name:
-                            <input type="text" id="firstname" name="firstname">
+                            <input type="text" id="first" name="firstname" required>
                         </label>
-                        <label for="lastname">
+                        <label for="last">
                             Last Name:
-                            <input type="text" id="lastname" name="lastname">
+                            <input type="text" id="last" name="lastname" required>
                         </label>
-                        <label for="phonenumber">
+                        <label for="phone">
                             Phone Number:
-                            <input type="text" id="phonenumber" name="phonenumber">
+                            <input type="text" id="phone" name="phone" required>
                         </label>
                         <label for="pw">
                             Password:
-                            <input type="password" id="pw" name="pw">
+                            <input type="password" id="pw" name="pw" required>
                         </label>
-                        <input type="submit" class="button button-green" value="Buy Ticket">
+                        <input type="submit" value="Buy Ticket" class="button">
                     </div>
                 </form>
             </div>
@@ -53,14 +56,15 @@
 
     <footer>
         <div class="socials">
-            <img src="./Floriade/facebook.png" alt="">
-            <img src="./Floriade/youtube.png" alt="">
-            <img src="./Floriade/google.png" alt="">
-            <img src="./Floriade/twitter.png" alt="">
+            <img src="./Floriade/youtube.png">
+            <img src="./Floriade/facebook.png">
+            <img src="./Floriade/twitter.png">
+            <img src="./Floriade/google.png">
         </div>
         <div class="copyright">
-            Copyright © 2022 Floriade All Rights Reserved 
+            Copyright &copy; 2022 Floriade All Rights Reserved
         </div>
     </footer>
 </body>
+
 </html>

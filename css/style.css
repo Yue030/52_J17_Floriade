@@ -2,16 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: Arial, "微軟正黑體", sans-serif;
+    font-family: Arial, "微軟正黑體", sans-serif;
 }
 
 :root {
     --primary-color: #4aa447;
 }
 
-body {
-    width: 100%;
-    height: 100%;
+html {
+    width: 1920px;
+    height: 1080px;
 }
 
 header {
@@ -19,39 +19,29 @@ header {
     z-index: 9999;
     width: 100vw;
     height: 7vh;
-    background: rgba(0, 0, 0, .7);
-    backdrop-filter: saturate(100%) blur(16px);
-    transition: background-color .8;
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(16px) saturate(100%);
 }
 
 input[type=text],
 input[type=password] {
-    background-image: none;
-    background: transparent;
+    background-color: transparent;
     border: none;
+    outline: none;
     box-shadow: none;
-    outline: none;
-}
-
-button:focus {
-    outline: none;
 }
 
 nav {
     display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    padding: 0 5vw !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 5vw;
 }
 
-.active {
+nav .active {
     color: var(--primary-color) !important;
-}
-
-nav img {
-    height: 80%;
 }
 
 nav .nav-item {
@@ -68,44 +58,22 @@ nav .nav-item a {
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 nav .nav-item a:hover {
-    background-color: white;
+    background: white;
     color: var(--primary-color);
-}
-
-.page-head {
-    height: 32vh;
-    background-image: url(../Floriade/PageHeadBg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.page-head h1 {
-    position: relative;
-    top: 50%;
-    color: white;
-}
-
-.page-area {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 58vh;
-    padding: 10vh 0;
 }
 
 .container {
     max-width: 1296px !important;
-    margin: 0 auto !important;
+    margin: 0 auto;
 }
 
 .title {
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 3rem;
 }
 
 .title.title-highlight {
@@ -114,39 +82,33 @@ nav .nav-item a:hover {
 }
 
 .button {
-    border: 2px solid transparent;
-    border-radius: 15px;
-    transition: .5s ease;
-}
-
-.button-green {
     background: var(--primary-color);
     border: 2px solid white;
+    border-radius: 16px;
     color: white;
+    transition: .5s;
 }
 
-.button-outline {
-    background: transparent;
-    color: black;
-}
-
-.button-green:hover {
+.button:hover {
     background: white;
-    border: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
     color: var(--primary-color);
 }
 
-.button-outline:hover {
-    background-color: var(--primary-color);
-    border: 2px solid white;
-    color: white;
+/* Information */
+#maincarousel {
+    height: 40vh;
+    overflow: hidden;
 }
 
-/* Information */
+#maincarousel img {
+    height: 40vh;
+    object-fit: cover;
+}
+
 .information-area {
     display: flex;
     flex-direction: column;
-    min-height: 84vh;
     padding-top: 5vh;
 }
 
@@ -154,7 +116,7 @@ nav .nav-item a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 2vh;
+    padding-top: 1vh;
 }
 
 .information {
@@ -162,12 +124,11 @@ nav .nav-item a:hover {
     flex-direction: column;
     justify-content: space-around;
     width: 30%;
-    height: 40vh;
-    margin: 20px;
+    height: 35vh;
     padding: 25px;
     background: var(--primary-color);
     border-radius: 8px;
-    box-shadow: 1px 1px 7px 0 #3338;
+    box-shadow: 1px 1px 7px 0 #3333;
     transition: 1.1s;
 }
 
@@ -176,7 +137,7 @@ nav .nav-item a:hover {
 }
 
 .information .date,
-.information button {
+.information button  {
     font-weight: bold;
 }
 
@@ -186,7 +147,6 @@ nav .nav-item a:hover {
     height: 10%;
     border-color: white;
     color: white;
-    font-size: 2rem !important;
     opacity: 85%;
 }
 
@@ -214,16 +174,22 @@ nav .nav-item a:hover {
     width: 40%;
     height: 85%;
     font-size: 1.3rem;
-    transition: .5s ease;
 }
 
 /* News */
+.news-page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 8vh;
+}
+
 .news {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 45%;
-    height: 40vh;
+    height: 28vh;
 }
 
 .news .images {
@@ -233,6 +199,7 @@ nav .nav-item a:hover {
 
 .news img {
     width: 100%;
+    height: 28vh;
     object-fit: cover;
     transition: .5s;
 }
@@ -240,7 +207,7 @@ nav .nav-item a:hover {
 .news .caption {
     display: flex;
     justify-content: space-between;
-    min-height: 8vh;
+    height: 8vh;
     margin-top: 2vh;
 }
 
@@ -250,72 +217,45 @@ nav .nav-item a:hover {
 
 .news .title {
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .news button {
     align-self: flex-start;
     width: 20%;
-    height: 50%;
+    height: 70%;
     font-size: 1.3rem;
-    transition: .5s ease;
 }
 
 /* Discover */
-.card {
-    height: 60vh;
-    width: 30%;
-    color: white;
-    border: none;
+.discover-area {
+    padding-top: 10vh;
 }
 
-.card img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-.card-body {
-    background-color: var(--primary-color);
-    border-radius: 0 0 8px 8px;
-}
-
-/* Cables */
-.cables {
-    width: 100%;
-    padding-top: 5vh;
-}
-
-.cable {
+.discover-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4vh;
+    width: 100%;
 }
 
-.cable img {
+.discover-card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
     width: 50%;
+    font-size: 1.5rem;
+}
+
+.discover-card img {
+    width: 40%;
     height: 40vh;
     object-fit: cover;
-    border-radius: 15px;
-}
-
-.cable .desc {
-    width: 50%;
-    padding: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.cable:nth-child(2n) {
-    flex-direction: row-reverse;
 }
 
 /* Ticket */
 .ticket-area {
     position: relative;
-    height: 90vh;
+    height: 1080px;
     background-image: url(../Floriade/TicketBg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -334,14 +274,14 @@ nav .nav-item a:hover {
     backdrop-filter: blur(5px);
 }
 
-.ticket-box .ticket-form {
+.ticket-form {
     display: flex;
     flex-direction: column;
     width: 30vw;
     height: 55vh;
     padding: 2rem;
-    background: var(--primary-color);
-    border-radius: 15px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
 }
 
 .ticket-form .title {
@@ -350,12 +290,13 @@ nav .nav-item a:hover {
     height: 10%;
     border-color: white;
     color: white;
+    font-size: 3rem;
 }
 
 .input-area {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 90%;
     color: white;
 }
@@ -381,18 +322,20 @@ nav .nav-item a:hover {
 
 /* Footer */
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    height: 10vh !important;
-    background: #333 !important;
-    line-height: 1.7rem !important;
-    color: white !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 7vh;
+    background: #333;
+    color: white;
 }
 
 footer .socials img {
-    height: 32px !important;
+    width: 24px;
     cursor: pointer;
 }
