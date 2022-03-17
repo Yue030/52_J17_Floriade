@@ -31,6 +31,10 @@ input[type=password] {
     box-shadow: none;
 }
 
+button:focus {
+    outline: none;
+}
+
 nav {
     display: flex !important;
     justify-content: space-between;
