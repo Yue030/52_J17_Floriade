@@ -4,7 +4,7 @@ $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
 $sql = "INSERT INTO tickets(`firstname`, `lastname`, `phonenumber`, `password`) VALUES (?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute(array($_POST["firstname"], $_POST["lastname"], $_POST["phone"], $_POST["pw"]));
+$stmt->execute(array($_POST["first"], $_POST["last"], $_POST["phone"], $_POST["pw"]));
 
 echo "
     <script>

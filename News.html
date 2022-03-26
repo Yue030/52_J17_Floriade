@@ -6,98 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News | Floriade</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <img src="./Floriade/Logo.svg">
+        <nav class="shadow">
+            <img src="./Floriade/FloriadeLogo.png">
             <div class="nav-item">
                 <a href="./Home.html">Home</a>
                 <a href="./News.html" class="active">News</a>
                 <a href="./Discover.html">Discover</a>
-                <a href="./Ticket.html">Ticket</a>
+                <a href="./Tickets.html">Tickets</a>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <div class="news-page">
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News1.jpg">
-                </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
-                </div>
+    <main class="container news-page">
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News1.jpg">
             </div>
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News2.jpg">
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
                 </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
-                </div>
+                <button class="button">View</button>
             </div>
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News3.jpg">
-                </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
-                </div>
+        </div>
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News2.jpg">
             </div>
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News4.jpg">
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
                 </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
-                </div>
+                <button class="button">View</button>
             </div>
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News5.jpg">
-                </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
-                </div>
+        </div>
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News3.jpg">
             </div>
-            <div class="news">
-                <div class="images">
-                    <img src="./Floriade/News6.jpg">
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
                 </div>
-                <div class="caption">
-                    <div class="text">
-                        <div class="title">Title</div>
-                        <div class="desc">Text</div>
-                    </div>
-                    <button class="button">View</button>
+                <button class="button">View</button>
+            </div>
+        </div>
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News4.jpg">
+            </div>
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
                 </div>
+                <button class="button">View</button>
+            </div>
+        </div>
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News5.jpg">
+            </div>
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
+                </div>
+                <button class="button">View</button>
+            </div>
+        </div>
+        <div class="news">
+            <div class="images">
+                <img src="./Floriade/News6.jpg">
+            </div>
+            <div class="caption">
+                <div class="text">
+                    <h1 class="title">Title</h1>
+                    <div class="desc">Test</div>
+                </div>
+                <button class="button">View</button>
             </div>
         </div>
     </main>
@@ -105,22 +103,22 @@
     <footer>
         <div class="socials">
             <img src="./Floriade/youtube.png">
-            <img src="./Floriade/facebook.png">
             <img src="./Floriade/twitter.png">
+            <img src="./Floriade/facebook.png">
             <img src="./Floriade/google.png">
         </div>
-        <div class="copyright">
-            Copyright &copy; 2022 Floriade All Rights Reserved
+        <div class="copyright my-2">
+            Copyright &copy; 2022 All Rights Reserved.
         </div>
     </footer>
 </body>
 
 <script>
     $(".news").hover(function() {
-        $(this).find("img").css({transform: "scale(1.1)"})
+        $(this).find('img').css({ transform: "scale(1.1)" });
     }, function() {
-        $(this).find("img").css({transform: "scale(1)"})
-    })
+        $(this).find('img').css({ transform: "scale(1)" });
+    });
 </script>
 
 </html>
